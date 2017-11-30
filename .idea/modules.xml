@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CS 1332.iml" filepath="$PROJECT_DIR$/CS 1332.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 01/HW 01.iml" filepath="$PROJECT_DIR$/HW 01/HW 01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 02/HW 02.iml" filepath="$PROJECT_DIR$/HW 02/HW 02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 03/HW 03.iml" filepath="$PROJECT_DIR$/HW 03/HW 03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 04/HW 04.iml" filepath="$PROJECT_DIR$/HW 04/HW 04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 05/HW 05.iml" filepath="$PROJECT_DIR$/HW 05/HW 05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 06/HW 06.iml" filepath="$PROJECT_DIR$/HW 06/HW 06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 07/HW 07.iml" filepath="$PROJECT_DIR$/HW 07/HW 07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 08/HW 08.iml" filepath="$PROJECT_DIR$/HW 08/HW 08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 09/HW 09.iml" filepath="$PROJECT_DIR$/HW 09/HW 09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 10/HW 10.iml" filepath="$PROJECT_DIR$/HW 10/HW 10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW 11/HW 11.iml" filepath="$PROJECT_DIR$/HW 11/HW 11.iml" />
+    </modules>
+  </component>
+</project>
