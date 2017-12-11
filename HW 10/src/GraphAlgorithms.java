@@ -1,12 +1,4 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * My implementation of various different graph algorithms.
@@ -227,8 +219,6 @@ public class GraphAlgorithms {
      * DO NOT modify the structure of the graph. The graph should be unmodified
      * after this method terminates.
      *
-     * TODO: Algorithm doesn't work. Fix bugs/errors.
-     *
      * @throws IllegalArgumentException if any input is null
      * @param <T> the generic typing of the data
      * @param graph the graph we are applying Kruskals to
@@ -239,18 +229,20 @@ public class GraphAlgorithms {
             throw new IllegalArgumentException("Graph cannot be null");
         }
 
-        Set<Edge<T>> answer = new HashSet<>();
+        PriorityQueue<Edge<T>> queue = new PriorityQueue<>(
+                graph.getEdges());
         DisjointSet<Vertex<T>> vertSet = new DisjointSet<>(
                 graph.getAdjList().keySet());
 
-        for (Edge<T> edge : graph.getEdges()) {
+        Set<Edge<T>> answer = new HashSet<>();
+        while (!queue.isEmpty()) {
+            Edge<T> edge = queue.poll();
             Vertex<T> u = edge.getU();
             Vertex<T> v = edge.getV();
-            if (vertSet.find(u) != vertSet.find(v)
-                || vertSet.find(u) == null
-                || vertSet.find(v) == null) {
-                vertSet.union(u, v);
+            if (vertSet.find(u) != vertSet.find(v)) {
                 answer.add(edge);
+                answer.add(new Edge<>(v, u, edge.getWeight()));
+                vertSet.union(u, v);
             }
         }
         return answer;
