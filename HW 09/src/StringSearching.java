@@ -235,23 +235,23 @@ public class StringSearching {
         }
         int pHash = generateHash(pattern, pattern.length());
         int tHash = generateHash(text, pattern.length());
-        int i = 0;
-        while (i <= text.length() - pattern.length()) {
+        int t = 0;
+        while (t <= text.length() - pattern.length()) {
             if (pHash == tHash) {
-                int j = 0;
-                while (j < pattern.length() && comparator
-                        .compare(text.charAt(i + j), pattern.charAt(j)) == 0) {
-                    j++;
+                int p = 0;
+                while (p < pattern.length() && comparator
+                        .compare(text.charAt(t + p), pattern.charAt(p)) == 0) {
+                    p++;
                 }
-                if (j == pattern.length()) {
-                    found.add(i);
+                if (p == pattern.length()) {
+                    found.add(t);
                 }
             }
-            if (i + 1 <= text.length() - pattern.length()) {
-                tHash = updateHash(tHash, pattern.length(), text.charAt(i),
-                        text.charAt(i + pattern.length()));
+            if (t + 1 <= text.length() - pattern.length()) {
+                tHash = updateHash(tHash, pattern.length(), text.charAt(t),
+                        text.charAt(t + pattern.length()));
             }
-            i++;
+            t++;
         }
         return found;
     }
